@@ -1,0 +1,27 @@
+﻿<Window x:Class="PolygonDrawer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="700" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" BorderThickness="2">
+            <Grid Grid.Column="0" Name="ToolContainer">
+                <StackPanel>
+                    <Button Name="DrawerToolButton" Click="DrawerToolButton_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Stretch" Content="Drawer"/>
+                    <Button Name="EraserToolButton" Click="EraserToolButton_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Stretch" Content="Eraser"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border BorderBrush="Red" BorderThickness="2" Grid.Column="1">
+            <Canvas Grid.Column="1" Name="MyCanvas" MouseLeftButtonDown="MyCanvas_MouseLeftButtonDown" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Canvas.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </Canvas.Background>
+            </Canvas>
+        </Border>
+    </Grid>
+</Window>
